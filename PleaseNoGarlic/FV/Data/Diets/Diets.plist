@@ -8885,7 +8885,13 @@
 					</array>
 				</dict>
 				<key>Taxonomies</key>
-				<dict/>
+				<dict>
+					<key>Ingredients</key>
+					<array>
+						<string>en:spices</string>
+						<string>en:herbs</string>
+					</array>
+				</dict>
 			</dict>
 			<key>en:non-compliant</key>
 			<dict>

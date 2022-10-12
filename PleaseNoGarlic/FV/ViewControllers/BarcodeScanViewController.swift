@@ -59,7 +59,8 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
     }
     @IBOutlet weak var consentButton: UIButton! {
         didSet {
-            consentButton?.titleLabel?.text = "I understand the risks"
+            consentButton?.setTitle("I understand the risks", for: .normal)
+            consentButton?.setTitle("I understand the risks", for: .selected)
         }
     }
     
@@ -211,7 +212,7 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
 
                             case 0:
                                 productView.backgroundColor = .systemYellow
-                                assessmentImage.image = UIImage.init(systemName: "questionmark.circle")
+                                assessmentImage.image = UIImage.init(systemName: "face.dashed")
 
                             case 1:
                                 productView.backgroundColor = .systemMint
