@@ -47,20 +47,20 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
     
     @IBOutlet weak var tapToDismissLabel: UILabel! {
         didSet {
-            tapToDismissLabel?.text = "Tap to dismiss and scan again"
+            tapToDismissLabel?.text = TranslatableStrings.TapToDismiss
         }
     }
     @IBOutlet weak var consentView: UIView!
     
     @IBOutlet weak var consentTextLabel: UILabel! {
         didSet {
-            consentTextLabel?.text = "Please No Garlic helps you to assess whether a food product contains garlic. The assesment is based on the data of Open Food Facts and the garlic free community. Producers however do change recipes before we catch them. So be VERY CAREFUL. If your are alergic do NOT trust Please No Garlic"
+            consentTextLabel?.text = TranslatableStrings.Consent
         }
     }
     @IBOutlet weak var consentButton: UIButton! {
         didSet {
-            consentButton?.setTitle("I understand the risks", for: .normal)
-            consentButton?.setTitle("I understand the risks", for: .selected)
+            consentButton?.setTitle(TranslatableStrings.ConsentAcceptance, for: .normal)
+            consentButton?.setTitle(TranslatableStrings.ConsentAcceptance, for: .selected)
         }
     }
     
@@ -70,7 +70,7 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
     
     @IBOutlet weak var productNameBarButtonItem: UIBarButtonItem! {
         didSet {
-            productNameBarButtonItem.title = "No product detected"
+            productNameBarButtonItem.title = TranslatableStrings.PointCamera
         }
     }
         
@@ -263,6 +263,8 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
     }
     @objc func doubleTapOnProductView() {
         productView?.isHidden = true
+        productNameBarButtonItem?.title = TranslatableStrings.PointCamera
+
     }
 
     override func viewDidLoad() {
