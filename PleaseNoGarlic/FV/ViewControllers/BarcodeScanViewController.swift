@@ -204,7 +204,7 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
 
                             case -2:
                                 productView.backgroundColor = .systemRed
-                                assessmentImage.image = UIImage.init(systemName: "xmark`")
+                                assessmentImage.image = UIImage.init(systemName: "xmark")
 
                             case -1:
                                 productView.backgroundColor = .systemOrange

@@ -8888,8 +8888,12 @@
 				<dict>
 					<key>Ingredients</key>
 					<array>
-						<string>en:spices</string>
-						<string>en:herbs</string>
+						<array>
+							<string>en:spices</string>
+						</array>
+						<array>
+							<string>en:herbs</string>
+						</array>
 					</array>
 				</dict>
 			</dict>
@@ -8924,7 +8928,9 @@
 				<dict>
 					<key>Ingredients</key>
 					<array>
-						<string>en:garlic</string>
+						<array>
+							<string>en:garlic</string>
+						</array>
 					</array>
 				</dict>
 			</dict>
