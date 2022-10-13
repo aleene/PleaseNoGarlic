@@ -13,10 +13,10 @@ After scanning a barcode the app will display an assesment screen:
 
 The no garlic diet consists of the following attributed are taken into account:
 
-*has no garlic
-* * ingredients: garlic
+* has no garlic
+    * ingredients: garlic
 * possibly has garlic
-* * ingredients: herbs, spices
+    * ingredients: herbs, spices
 
 
 ## Webpage
