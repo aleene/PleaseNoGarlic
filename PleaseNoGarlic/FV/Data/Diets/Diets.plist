@@ -8894,6 +8894,9 @@
 						<array>
 							<string>en:herbs</string>
 						</array>
+						<array>
+							<string>en:flavouring</string>
+						</array>
 					</array>
 				</dict>
 			</dict>

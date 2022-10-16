@@ -449,8 +449,8 @@
 				AB80A99528F440F600A72FF2 /* OFFProductForestFootPrintData.swift */,
 				AB80A99328F440DD00A72FF2 /* OFFProductEcoscoreData.swift */,
 				AB80A98F28F4407600A72FF2 /* OFFProduct.swift */,
-				AB80A98D28F4404D00A72FF2 /* OFFProductNutriments.swift */,
 				AB80A98928F43E0000A72FF2 /* OFFProductDetailed.swift */,
+				AB80A98D28F4404D00A72FF2 /* OFFProductNutriments.swift */,
 				AB80A98728F43DCA00A72FF2 /* OFFProductJson.swift */,
 			);
 			path = Jsons;
@@ -842,7 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Q4FXMVWJ7V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PleaseNoGarlic/Info.plist;
@@ -858,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivas.hoveringabove.pleasenogarlic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -872,7 +872,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Q4FXMVWJ7V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PleaseNoGarlic/Info.plist;
@@ -888,7 +888,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivas.hoveringabove.pleasenogarlic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
