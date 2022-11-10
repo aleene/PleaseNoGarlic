@@ -441,11 +441,10 @@ class Diets {
                             name.count >= 0  {
                             switch product.ingredientsHierarchy {
                             case .available(let tags):
-                                if tags.contains(name[0]) {
-                                    matchedTags.append(Constant.Key.Ingredients + "/" + name[0])
-                                    //if name.count == 2 {
-                                    //    matchedTags.append(Constant.Key.Ingredients + "/" + name[1])
-                                    //}
+                                for element in name {
+                                    if tags.contains(element) {
+                                        matchedTags.append(Constant.Key.Ingredients + "/" + name[0])
+                                    }
                                 }
                             default: break
                             }
