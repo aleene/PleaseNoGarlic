@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdU-iz-Cfu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdU-iz-Cfu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,13 +12,13 @@
         <!--Barcode Scan View Controller-->
         <scene sceneID="EvG-K9-lIO">
             <objects>
-                <viewController id="pdU-iz-Cfu" customClass="BarcodeScanViewController" customModule="PleaseNoAlliums" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pdU-iz-Cfu" customClass="BarcodeScanViewController" customModule="PleaseNoGarlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlF-bS-Koh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-Gu-E8J">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PgH-ic-aVs"/>
                                     <barButtonItem title="Item" id="TKa-3f-4H9"/>
@@ -25,23 +26,29 @@
                                 </items>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGK-aZ-GFa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <connections>
                                     <segue destination="vdj-Zs-AZ9" kind="embed" identifier="RSCodeReaderViewControllerSegue" id="VTG-uL-eGi"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myb-Pp-ssz">
-                                <rect key="frame" x="50" y="144" width="314" height="618"/>
+                                <rect key="frame" x="50" y="148" width="314" height="614"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.dashed" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bGP-vv-RVC">
-                                        <rect key="frame" x="57" y="209.5" width="200" height="199"/>
+                                        <rect key="frame" x="57" y="207.5" width="200" height="199"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bGP-vv-RVC" secondAttribute="height" multiplier="1:1" id="4Ls-Nj-QGF"/>
                                             <constraint firstAttribute="width" constant="200" id="5Nd-40-7ix"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5c-Ud-iae">
+                                        <rect key="frame" x="57" y="427" width="200" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-kb-opM">
-                                        <rect key="frame" x="139.5" y="589" width="35.5" height="17"/>
+                                        <rect key="frame" x="136.5" y="581.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,22 +57,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="bGP-vv-RVC" firstAttribute="centerX" secondItem="myb-Pp-ssz" secondAttribute="centerX" id="6Ub-cf-e1l"/>
+                                    <constraint firstItem="I5c-Ud-iae" firstAttribute="trailing" secondItem="bGP-vv-RVC" secondAttribute="trailing" id="AXt-dU-A9D"/>
+                                    <constraint firstItem="I5c-Ud-iae" firstAttribute="leading" secondItem="bGP-vv-RVC" secondAttribute="leading" id="Cbb-Ig-Myd"/>
+                                    <constraint firstItem="I5c-Ud-iae" firstAttribute="width" secondItem="bGP-vv-RVC" secondAttribute="width" id="JCJ-OX-wlv"/>
+                                    <constraint firstItem="I5c-Ud-iae" firstAttribute="bottom" secondItem="bGP-vv-RVC" secondAttribute="bottom" constant="20" id="PCt-V0-s7t"/>
                                     <constraint firstItem="bGP-vv-RVC" firstAttribute="centerY" secondItem="myb-Pp-ssz" secondAttribute="centerY" id="YPc-pW-dgO"/>
                                     <constraint firstItem="pwG-kb-opM" firstAttribute="centerX" secondItem="myb-Pp-ssz" secondAttribute="centerX" id="ji5-W0-RAe"/>
                                     <constraint firstAttribute="bottom" secondItem="pwG-kb-opM" secondAttribute="bottom" constant="12" id="uRl-V6-Vv9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru0-eO-gFu" userLabel="ConsentView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-kk-sdh">
-                                        <rect key="frame" x="41.5" y="400.5" width="331" height="17"/>
+                                        <rect key="frame" x="41.5" y="397" width="331" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-dd-Tc1">
-                                        <rect key="frame" x="173.5" y="457.5" width="67" height="31"/>
+                                        <rect key="frame" x="169.5" y="457.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -108,6 +119,7 @@
                         <outlet property="consentButton" destination="Zoc-dd-Tc1" id="QfL-Kn-gpw"/>
                         <outlet property="consentTextLabel" destination="nsM-kk-sdh" id="KAv-fy-Q63"/>
                         <outlet property="consentView" destination="Ru0-eO-gFu" id="NmP-4F-a2L"/>
+                        <outlet property="folksonomyLabel" destination="I5c-Ud-iae" id="uki-ep-ix8"/>
                         <outlet property="productNameBarButtonItem" destination="TKa-3f-4H9" id="bpf-2v-VCd"/>
                         <outlet property="productView" destination="myb-Pp-ssz" id="tJz-rW-wSN"/>
                         <outlet property="tapToDismissLabel" destination="pwG-kb-opM" id="HpN-fH-Ihe"/>
@@ -120,9 +132,9 @@
         <!--Code Reader View Controller-->
         <scene sceneID="KEU-gI-Sxu">
             <objects>
-                <viewController id="vdj-Zs-AZ9" customClass="RSCodeReaderViewController" customModule="PleaseNoAlliums" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vdj-Zs-AZ9" customClass="RSCodeReaderViewController" customModule="PleaseNoGarlic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ffb-Zt-JqY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XW0-g1-NsJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,7 +146,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="face.dashed" catalog="system" width="128" height="121"/>
+        <image name="face.dashed" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

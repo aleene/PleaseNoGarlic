@@ -306,7 +306,9 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
     
     @objc func onApplicationWillEnterForeground() {
         if !Platform.isSimulator {
-            self.session.startRunning()
+            DispatchQueue.global(qos:.default).async {
+                self.session.startRunning()
+            }
         }
     }
     
@@ -381,7 +383,9 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
         NotificationCenter.default.addObserver(self, selector: #selector(RSCodeReaderViewController.onApplicationDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
         if !Platform.isSimulator {
-            self.session.startRunning()
+            DispatchQueue.global(qos:.default).async {
+                self.session.startRunning()
+            }
         }
     }
     

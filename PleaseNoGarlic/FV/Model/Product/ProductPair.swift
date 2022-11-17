@@ -221,7 +221,11 @@ class ProductPair {
         }
 
     }
-    
+    // tags in the local product should contain edited and nwe tags
+    var folksonomyTags: [FSNM.Tag]? {
+        return remoteProduct?.folksonomyTags
+    }
+
     var hasAdditives: Bool {
         if let hasTags = localProduct?.additivesOriginal.hasTags,
             hasTags {

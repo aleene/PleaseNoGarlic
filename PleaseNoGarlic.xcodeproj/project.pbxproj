@@ -53,12 +53,10 @@
 		AB80A96728F4311D00A72FF2 /* BarcodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A96628F4311D00A72FF2 /* BarcodeScanViewController.swift */; };
 		AB80A96928F4330000A72FF2 /* LocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A96828F4330000A72FF2 /* LocaleExtension.swift */; };
 		AB80A96B28F4333C00A72FF2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A96A28F4333C00A72FF2 /* StringExtension.swift */; };
-		AB80A97028F4348E00A72FF2 /* ProductPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A96F28F4348E00A72FF2 /* ProductPair.swift */; };
 		AB80A97228F434FB00A72FF2 /* BarcodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97128F434FB00A72FF2 /* BarcodeType.swift */; };
 		AB80A97528F4355F00A72FF2 /* TranslatableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97428F4355F00A72FF2 /* TranslatableStrings.swift */; };
 		AB80A97728F436D000A72FF2 /* OFFProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97628F436D000A72FF2 /* OFFProducts.swift */; };
 		AB80A97A28F4374D00A72FF2 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97928F4374D00A72FF2 /* ProductType.swift */; };
-		AB80A97E28F4396900A72FF2 /* FoodProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97D28F4396900A72FF2 /* FoodProduct.swift */; };
 		AB80A98028F439B200A72FF2 /* ProductFetchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A97F28F439B200A72FF2 /* ProductFetchStatus.swift */; };
 		AB80A98328F43A1100A72FF2 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A98228F43A1100A72FF2 /* Tags.swift */; };
 		AB80A98528F43A7300A72FF2 /* OpenFoodFactsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80A98428F43A7300A72FF2 /* OpenFoodFactsRequest.swift */; };
@@ -108,6 +106,15 @@
 		AB80A9E528F457D500A72FF2 /* Labels.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB80A9E428F457D500A72FF2 /* Labels.plist */; };
 		AB80A9E728F457EF00A72FF2 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB80A9E628F457EF00A72FF2 /* Ingredients.plist */; };
 		AB80A9EB28F459C100A72FF2 /* Diets.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB80A9EA28F459C100A72FF2 /* Diets.plist */; };
+		ABDBE2B02926725200971568 /* FSNMProductTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2AF2926725200971568 /* FSNMProductTags.swift */; };
+		ABDBE2B22926725A00971568 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B12926725A00971568 /* AuthController.swift */; };
+		ABDBE2B82926726200971568 /* FSNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B32926726200971568 /* FSNM.swift */; };
+		ABDBE2B92926726200971568 /* HTTPLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B42926726200971568 /* HTTPLibrary.swift */; };
+		ABDBE2BA2926726200971568 /* OFFAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B52926726200971568 /* OFFAPI.swift */; };
+		ABDBE2BB2926726200971568 /* OFFBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B62926726200971568 /* OFFBarcode.swift */; };
+		ABDBE2BC2926726200971568 /* OFFProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2B72926726200971568 /* OFFProductType.swift */; };
+		ABDBE2C82926743100971568 /* ProductPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2C72926743100971568 /* ProductPair.swift */; };
+		ABDBE2CA2926749900971568 /* FoodProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBE2C92926749900971568 /* FoodProduct.swift */; };
 		ABF6CFD128F32334004D2A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF6CFD028F32334004D2A80 /* AppDelegate.swift */; };
 		ABF6CFD328F32334004D2A80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF6CFD228F32334004D2A80 /* SceneDelegate.swift */; };
 		ABF6CFD828F32334004D2A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF6CFD628F32334004D2A80 /* Main.storyboard */; };
@@ -163,12 +170,10 @@
 		AB80A96628F4311D00A72FF2 /* BarcodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScanViewController.swift; sourceTree = "<group>"; };
 		AB80A96828F4330000A72FF2 /* LocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleExtension.swift; sourceTree = "<group>"; };
 		AB80A96A28F4333C00A72FF2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		AB80A96F28F4348E00A72FF2 /* ProductPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPair.swift; sourceTree = "<group>"; };
 		AB80A97128F434FB00A72FF2 /* BarcodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeType.swift; sourceTree = "<group>"; };
 		AB80A97428F4355F00A72FF2 /* TranslatableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatableStrings.swift; sourceTree = "<group>"; };
 		AB80A97628F436D000A72FF2 /* OFFProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFFProducts.swift; sourceTree = "<group>"; };
 		AB80A97928F4374D00A72FF2 /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
-		AB80A97D28F4396900A72FF2 /* FoodProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodProduct.swift; sourceTree = "<group>"; };
 		AB80A97F28F439B200A72FF2 /* ProductFetchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFetchStatus.swift; sourceTree = "<group>"; };
 		AB80A98228F43A1100A72FF2 /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		AB80A98428F43A7300A72FF2 /* OpenFoodFactsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsRequest.swift; sourceTree = "<group>"; };
@@ -218,6 +223,15 @@
 		AB80A9E428F457D500A72FF2 /* Labels.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Labels.plist; sourceTree = "<group>"; };
 		AB80A9E628F457EF00A72FF2 /* Ingredients.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ingredients.plist; sourceTree = "<group>"; };
 		AB80A9EA28F459C100A72FF2 /* Diets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Diets.plist; sourceTree = "<group>"; };
+		ABDBE2AF2926725200971568 /* FSNMProductTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSNMProductTags.swift; sourceTree = "<group>"; };
+		ABDBE2B12926725A00971568 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		ABDBE2B32926726200971568 /* FSNM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSNM.swift; sourceTree = "<group>"; };
+		ABDBE2B42926726200971568 /* HTTPLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLibrary.swift; sourceTree = "<group>"; };
+		ABDBE2B52926726200971568 /* OFFAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFFAPI.swift; sourceTree = "<group>"; };
+		ABDBE2B62926726200971568 /* OFFBarcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFFBarcode.swift; sourceTree = "<group>"; };
+		ABDBE2B72926726200971568 /* OFFProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFFProductType.swift; sourceTree = "<group>"; };
+		ABDBE2C72926743100971568 /* ProductPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPair.swift; sourceTree = "<group>"; };
+		ABDBE2C92926749900971568 /* FoodProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodProduct.swift; sourceTree = "<group>"; };
 		ABF6CFCD28F32334004D2A80 /* PleaseNoGarlic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleaseNoGarlic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF6CFD028F32334004D2A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF6CFD228F32334004D2A80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -356,6 +370,7 @@
 		AB80A96D28F4339B00A72FF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABDBE2BE2926727900971568 /* Folksonomy */,
 				AB80A98128F439EA00A72FF2 /* Basic */,
 				AB80A96E28F4347500A72FF2 /* Product */,
 			);
@@ -365,10 +380,10 @@
 		AB80A96E28F4347500A72FF2 /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				AB80A97D28F4396900A72FF2 /* FoodProduct.swift */,
+				ABDBE2C72926743100971568 /* ProductPair.swift */,
+				ABDBE2C92926749900971568 /* FoodProduct.swift */,
 				AB80A97828F4372500A72FF2 /* ProductElements */,
 				AB80A97628F436D000A72FF2 /* OFFProducts.swift */,
-				AB80A96F28F4348E00A72FF2 /* ProductPair.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -491,6 +506,28 @@
 			path = Diets;
 			sourceTree = "<group>";
 		};
+		ABDBE2BD2926726C00971568 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBE2B12926725A00971568 /* AuthController.swift */,
+				ABDBE2B32926726200971568 /* FSNM.swift */,
+				ABDBE2B42926726200971568 /* HTTPLibrary.swift */,
+				ABDBE2B52926726200971568 /* OFFAPI.swift */,
+				ABDBE2B62926726200971568 /* OFFBarcode.swift */,
+				ABDBE2B72926726200971568 /* OFFProductType.swift */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		ABDBE2BE2926727900971568 /* Folksonomy */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBE2AF2926725200971568 /* FSNMProductTags.swift */,
+				ABDBE2BD2926726C00971568 /* Required */,
+			);
+			path = Folksonomy;
+			sourceTree = "<group>";
+		};
 		ABF6CFC428F32334004D2A80 = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +602,10 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				fr,
+				nl,
 			);
 			mainGroup = ABF6CFC428F32334004D2A80;
 			productRefGroup = ABF6CFCE28F32334004D2A80 /* Products */;
@@ -605,8 +646,10 @@
 				AB80A9D228F44AA500A72FF2 /* Ecoscore.swift in Sources */,
 				AB80A94828F4304100A72FF2 /* RSCodeLayer.swift in Sources */,
 				AB80A91028F42FDE00A72FF2 /* NetworkFetcher.swift in Sources */,
+				ABDBE2B82926726200971568 /* FSNM.swift in Sources */,
 				AB80A98C28F43E2A00A72FF2 /* OFF.swift in Sources */,
 				AB80A93828F4304100A72FF2 /* RSUnifiedCodeGenerator.swift in Sources */,
+				ABDBE2BB2926726200971568 /* OFFBarcode.swift in Sources */,
 				AB80A91328F42FDE00A72FF2 /* Fetcher.swift in Sources */,
 				AB80A93C28F4304100A72FF2 /* RSITF14Generator.swift in Sources */,
 				AB80A94728F4304100A72FF2 /* RSExtendedCode39Generator.swift in Sources */,
@@ -614,10 +657,12 @@
 				AB80A9DD28F4575400A72FF2 /* Diets.swift in Sources */,
 				AB80A98528F43A7300A72FF2 /* OpenFoodFactsRequest.swift in Sources */,
 				AB80A9A528F442C400A72FF2 /* OFFProductNutrientLevelValue.swift in Sources */,
+				ABDBE2B92926726200971568 /* HTTPLibrary.swift in Sources */,
 				AB80A99E28F4417100A72FF2 /* OFFProductStates.swift in Sources */,
 				AB80A90C28F42FDE00A72FF2 /* Log.swift in Sources */,
 				AB80A8B928F42EA000A72FF2 /* GenericDownloadTask.swift in Sources */,
 				ABF6CFD128F32334004D2A80 /* AppDelegate.swift in Sources */,
+				ABDBE2BC2926726200971568 /* OFFProductType.swift in Sources */,
 				AB80A97228F434FB00A72FF2 /* BarcodeType.swift in Sources */,
 				AB80A91428F42FDE00A72FF2 /* UIView+Haneke.swift in Sources */,
 				AB80A99028F4407600A72FF2 /* OFFProduct.swift in Sources */,
@@ -635,14 +680,15 @@
 				AB80A93D28F4304100A72FF2 /* RSUPCEGenerator.swift in Sources */,
 				AB80A9D828F44CD800A72FF2 /* SIUnit.swift in Sources */,
 				AB80A9CA28F449D400A72FF2 /* ForestFootprint.swift in Sources */,
+				ABDBE2B22926725A00971568 /* AuthController.swift in Sources */,
 				AB80A94428F4304100A72FF2 /* RSCodeGenerator.swift in Sources */,
 				AB80A91C28F42FDE00A72FF2 /* DiskCache.swift in Sources */,
+				ABDBE2C82926743100971568 /* ProductPair.swift in Sources */,
 				AB80A94528F4304100A72FF2 /* RSITFGenerator.swift in Sources */,
 				AB80A90F28F42FDE00A72FF2 /* CryptoSwiftMD5.swift in Sources */,
 				AB80A92328F4300E00A72FF2 /* Keyboard.swift in Sources */,
 				AB80A98E28F4404D00A72FF2 /* OFFProductNutriments.swift in Sources */,
 				AB80A9BD28F4463D00A72FF2 /* Node.swift in Sources */,
-				AB80A97E28F4396900A72FF2 /* FoodProduct.swift in Sources */,
 				AB80A9C228F447DF00A72FF2 /* ReferenceDailyIntakeList.swift in Sources */,
 				AB80A94028F4304100A72FF2 /* RSCode39Generator.swift in Sources */,
 				ABF6CFD328F32334004D2A80 /* SceneDelegate.swift in Sources */,
@@ -651,6 +697,7 @@
 				AB80A9DA28F44CEB00A72FF2 /* MetricPrefix.swift in Sources */,
 				AB80A91E28F42FDE00A72FF2 /* CGSize+Swift.swift in Sources */,
 				AB80A93B28F4304100A72FF2 /* RSCodeDataMatrixGenerator.swift in Sources */,
+				ABDBE2BA2926726200971568 /* OFFAPI.swift in Sources */,
 				AB80A94128F4304100A72FF2 /* RSCornersLayer.swift in Sources */,
 				AB80A91928F42FDE00A72FF2 /* Fetch.swift in Sources */,
 				AB80A9B528F444E800A72FF2 /* OFFplists.swift in Sources */,
@@ -671,6 +718,7 @@
 				AB80A97A28F4374D00A72FF2 /* ProductType.swift in Sources */,
 				AB80A98328F43A1100A72FF2 /* Tags.swift in Sources */,
 				AB80A9BF28F4469400A72FF2 /* Language.swift in Sources */,
+				ABDBE2CA2926749900971568 /* FoodProduct.swift in Sources */,
 				AB80A91A28F42FDE00A72FF2 /* Cache.swift in Sources */,
 				AB80A93928F4304100A72FF2 /* RSCodeReaderViewController.swift in Sources */,
 				AB80A93F28F4304100A72FF2 /* RSUnifiedCodeValidator.swift in Sources */,
@@ -684,7 +732,6 @@
 				AB80A96728F4311D00A72FF2 /* BarcodeScanViewController.swift in Sources */,
 				AB80A9E128F4577700A72FF2 /* SelectedDietsDefaults.swift in Sources */,
 				AB80A94328F4304100A72FF2 /* RSCode128Generator.swift in Sources */,
-				AB80A97028F4348E00A72FF2 /* ProductPair.swift in Sources */,
 				AB80A9D028F44A9300A72FF2 /* NutritionalScoreLevel.swift in Sources */,
 				AB80A99228F4409E00A72FF2 /* KeyedDecodingContainerExtension.swift in Sources */,
 				AB80A8B828F42EA000A72FF2 /* DownloadService.swift in Sources */,
@@ -693,6 +740,7 @@
 				AB80A9D428F44B5300A72FF2 /* NutritionEntryUnit.swift in Sources */,
 				AB80A94628F4304100A72FF2 /* RSCode93Generator.swift in Sources */,
 				AB80A9A728F442FB00A72FF2 /* OFFProductForestFootPrintDataIngredientsTypeDetailed.swift in Sources */,
+				ABDBE2B02926725200971568 /* FSNMProductTags.swift in Sources */,
 				AB80A99828F4412200A72FF2 /* OFFProductNutrientLevels.swift in Sources */,
 				AB80A91728F42FDE00A72FF2 /* UIButton+Haneke.swift in Sources */,
 				AB80A91528F42FDE00A72FF2 /* String+Haneke.swift in Sources */,
