@@ -8825,7 +8825,13 @@
 					</array>
 				</dict>
 				<key>Taxonomies</key>
-				<dict/>
+				<dict>
+					<key>Folksonomy</key>
+					<dict>
+						<key>ingredients:garlic</key>
+						<string>no:confirmed</string>
+					</dict>
+				</dict>
 			</dict>
 			<key>en:compliant</key>
 			<dict>
@@ -8855,7 +8861,13 @@
 					</array>
 				</dict>
 				<key>Taxonomies</key>
-				<dict/>
+				<dict>
+					<key>Folksonomy</key>
+					<dict>
+						<key>ingredients:garlic</key>
+						<string>no</string>
+					</dict>
+				</dict>
 			</dict>
 			<key>en:possible non-compliant</key>
 			<dict>
@@ -8936,6 +8948,11 @@
 							<string>en:garlic</string>
 						</array>
 					</array>
+					<key>Folksonomy</key>
+					<dict>
+						<key>ingredients:garlic</key>
+						<string>yes</string>
+					</dict>
 				</dict>
 			</dict>
 		</dict>

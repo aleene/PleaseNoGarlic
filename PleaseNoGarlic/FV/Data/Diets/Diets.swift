@@ -20,6 +20,7 @@ class Diets {
             static let Categories = "Categories"
             static let Description = "Description"
             static let Ingredients = "Ingredients"
+            static let Folksonomy = "Folksonomy"
             static let Languages = "Languages"
             static let Labels = "Labels"
             static let Levels = "Levels"
@@ -49,13 +50,14 @@ class Diets {
         var order: Int
         var languages: [Language]
         var taxonomies: [Taxonomy]
+        var folksonomyTags: [String:String]
     }
     
     fileprivate struct Taxonomy {
         var key: String
         var names: [[String]]  // the first one is the key, the others parents
     }
-    
+
     public var count: Int? {
         checkInit()
         return all.count
@@ -190,24 +192,24 @@ class Diets {
 
     fileprivate var all: [String:Diet] = [:]
 
-    fileprivate func numberOfLevels(forDietWith key:String) -> Int? {
+    fileprivate func numberOfLevels(forDietWith key: String) -> Int? {
         checkInit()
         guard let diet = all[key] else { return nil }
         return diet.levels.count
     }
     
-    fileprivate func order(forDietWith key:String, and level:Int) -> Int? {
+    fileprivate func order(forDietWith key: String, and level: Int) -> Int? {
         checkInit()
         guard let diet = all[key] else { return nil }
         return diet.levels[level].order
     }
     
-    public func conclusion(_ product:FoodProduct, withDietAt index:Int, in languageCode:String) -> Int? {
+    public func conclusion(_ product: FoodProduct, withDietAt index: Int, in languageCode: String) -> Int? {
         let diets = sort(on: languageCode)
         return conclusion(product, forDietWith:diets[index].key)
     }
     
-    public func conclusion(_ product:FoodProduct, forDietWith key:String) -> Int? {
+    public func conclusion(_ product: FoodProduct, forDietWith key: String) -> Int? {
         checkInit()
         guard let neutralLevel = all[key]?.neutralLevel else { return nil }
         var neutralIndex: Int? = nil
@@ -296,6 +298,41 @@ class Diets {
         return matchesPerDietPerLevel
     }
     
+    /// check if the foodproduct has folksonomy tags compatible with the diet
+    public func folksonomyLevel(_ product: FoodProduct?, forDietWith key: String) -> Int? {
+        // are there any folksonomy tags, otherwise not relevant
+        guard let productFolksonomyTags = product?.folksonomyTags else { return nil }
+        guard !productFolksonomyTags.isEmpty else { return nil }
+                
+        if let numberOfLevels = numberOfLevels(forDietWith: key) {
+            for levelIndex in 0...numberOfLevels - 1 {
+                guard let order = order(forDietWith: key, and: levelIndex) else { return nil }
+                let orderTags = dietFolksonomyTags(forDietWith: key, at: order)
+                if !orderTags.isEmpty {
+                    for productTag in productFolksonomyTags {
+                        for dietTag in orderTags {
+                            if productTag.k == dietTag.0 &&
+                                productTag.v == dietTag.1 {
+                                return order
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return nil
+    }
+    
+    private func dietFolksonomyTags(forDietWith key: String, at order: Int ) -> [String:String] {
+        guard let diet = all[key] else { return [:] }
+        for level in diet.levels {
+            if level.order == order {
+                return level.folksonomyTags
+            }
+        }
+        return [:]
+    }
+    
     private func translate(_ matches: [(Int,[String])]) -> [(Int,[String])] {
         var translatedMatches: [(Int,[String])] = []
         translatedMatches = matches
@@ -376,7 +413,7 @@ class Diets {
         return filteredMatches
     }
     
-    private func match(_ product:FoodProduct, withDietWith key:String, in order:Int) -> [String] {
+    private func match(_ product: FoodProduct, withDietWith key: String, in order: Int) -> [String] {
         var matchedTags: [String] = []
         guard let validDiet = all[key] else { return [] }
         checkInit()
@@ -423,6 +460,7 @@ class Diets {
                             default: break
                             }
                         }
+                        
                         if taxonomy.key == Constant.Key.Traces,
                             name.count >= 0  {
                             switch product.tracesInterpreted {
@@ -449,6 +487,7 @@ class Diets {
                             default: break
                             }
                         }
+                        
                         if taxonomy.key == Constant.Key.Other,
                             name.count >= 0  {
                             switch product.otherNutritionalSubstances {
@@ -549,7 +588,7 @@ class Diets {
                                         if let validLevelsDict = value as? [String:Any] {
                                             // loop over all levels of the current diet
                                             for (levelKey, levelDict) in validLevelsDict {
-                                                var level = Level.init(key:levelKey, order: 0, languages: [], taxonomies: [])
+                                                var level = Level.init(key:levelKey, order: 0, languages: [], taxonomies: [], folksonomyTags: [:])
                                                 if let validLevel = levelDict as? [String:Any] {
                                                     for (levelElementKey, levelElement) in validLevel {
                                                         if levelElementKey == Constant.Key.Order {
@@ -597,6 +636,10 @@ class Diets {
                                                                     } else if taxonomyKey == Constant.Key.Other {
                                                                         if let values = taxonomyValue as? [[String]] {
                                                                             taxonomy.names = values
+                                                                        }
+                                                                    } else if taxonomyKey == Constant.Key.Folksonomy {
+                                                                        if let values = taxonomyValue as? [String:String] {
+                                                                            level.folksonomyTags = values
                                                                         }
                                                                     } else {
                                                                         assert(true, "Diet: Taxonomy with a wrong key or array")

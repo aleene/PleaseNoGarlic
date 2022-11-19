@@ -76,7 +76,11 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
         
     @IBOutlet weak var productView: UIView!
     
-    @IBOutlet weak var folksonomyLabel: UILabel!
+    @IBOutlet weak var folksonomyLabel: UILabel! {
+        didSet {
+            folksonomyLabel?.layer.borderColor = CGColor.init(gray: 1.0, alpha: 1.0)
+        }
+    }
     
     @IBOutlet weak var scanView: UIView!
         
@@ -234,23 +238,21 @@ class BarcodeScanViewController: UIViewController, UITextFieldDelegate, Keyboard
 
                             }
                         }
-                        if validProduct.folksonomyTags != nil,
-                           let tags = validProduct.folksonomyTags,
-                            !tags.isEmpty,
-                            let garlicTag = tags.first(where: { $0.k == "ingredients:garlic" }) {
-                                    if garlicTag.v == "no" {
-                                        folksonomyLabel.backgroundColor = .systemMint
-                                        folksonomyLabel?.text = "Reported garlic-free"
-                                    } else if garlicTag.v == "confirmed"{
-                                        folksonomyLabel.backgroundColor = .systemGreen
-                                        folksonomyLabel?.text = "Reported garlic-free"
-                                    } else if garlicTag.v == "yes" {
-                                        folksonomyLabel.backgroundColor = .systemRed
-                                        folksonomyLabel?.text = "Contains garlic"
-                                    } else {
-                                        folksonomyLabel.backgroundColor = .clear
-                                        folksonomyLabel?.text = "No opinion"
-                                    }
+                        if let order = Diets.manager.folksonomyLevel(validProduct, forDietWith: dietKey) {
+                            switch order {
+                            case 1:
+                                folksonomyLabel.backgroundColor = .systemMint
+                                folksonomyLabel?.text = "Producer: garlic-free"
+                            case 0:
+                                folksonomyLabel.backgroundColor = .systemYellow
+                                folksonomyLabel?.text = "Community: garlic-free"
+                            case -2:
+                                folksonomyLabel.backgroundColor = .systemRed
+                                folksonomyLabel?.text = "Contains garlic"
+                            default:
+                                folksonomyLabel.backgroundColor = .clear
+                                folksonomyLabel?.text = "No opinion"
+                            }
                         } else {
                             folksonomyLabel.backgroundColor = .clear
                             folksonomyLabel?.text = "No opinion"
